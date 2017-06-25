@@ -1,6 +1,6 @@
 # entr_ineq
 MATLAB package for calculating entropic inequalities.
-[THE ACTUAL PACKAGE WILL BE UPLOADED SOON!]
+[PACKAGE IS NOT COMPLETE. I'M CURRENTLY UPLOADING IT.]
 
 The main goal of the package is to calculate entropic inequalities for a
 given set of random variables and possible independence constraints (IC) 
@@ -21,4 +21,4 @@ This packege contains additional programs which can be usefull for the
 computations (e.g. generation of data processing inequalities, Graham
 algorithm for determinig cyclicity of hypergraphs).
 
-SEE FULL DESCRIPTION IN THE MANUAL FILE (TO BE UPLOADED SOON).
+SEE FULL DESCRIPTION IN THE MANUAL FILE (WORK IN PROGRESS).
