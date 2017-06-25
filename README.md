@@ -8,7 +8,7 @@ variables and possible independence constraints among these variables.
 These constraints can be drawn from graph of a causal model (Bayesian
 Network or Markov Random Field). 
 
-The main modules of the package are:
+The main modules of the package are:\\
 -- Generation of basic inequalitites for a set of variables (e.g. Shannon,
 von Neuman),
 -- d-separation algorithm for directed acyclic graphs of Bayesian Networks
