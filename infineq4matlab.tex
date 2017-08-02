@@ -1,0 +1,126 @@
+\documentclass{elsart}
+\usepackage{amssymb,bbm}
+\usepackage{color}
+\usepackage{hyperref}
+\pagestyle{plain}
+
+%\newcommand{\ket}[1]{\ensuremath{|#1\rangle}}
+%\newcommand{\bra}[1]{\ensuremath{\langle#1|}}
+%newcommand{\ketbra}[1]{\ensuremath{| #1 \rangle \langle #1 |}}
+
+\begin{document}
+
+\begin{frontmatter}
+\title{A MATLAB package for the entropic inequalities.}
+
+\author{}
+
+\address{Naturwissenschaftlich-Technische Fakult\"at, Universit\"at Siegen, Walter-Flex-Str. 3, 57068 Siegen, Germany}
+
+%\address{}
+
+\ead{miklinnikolai@gmail.com}
+%\ead[url]{}
+
+\begin{abstract}
+This is a documentation for MATLAB package of programs, which can be used to work with entropy vector method. This method allows one to derive entropic inequalities from basics axioms of entropy (e.g. Shannon inequalities) and some possible additional linear constraints. These additional constrains can be defined by the causal structure of some causal model (Bayesian Network or Markov Random Fields).  
+\end{abstract}
+
+% 03.65.Ud                  Entanglement and quantum nonlocality
+% 03.67.Mn                  Entanglement in Quantum Information
+% 03.67.-a                  Quantum information
+% 03.67.Lx                  Quantum computation
+% 02.70.-c                  Computational techniques
+% 75.10.Pq                  Spin chain models
+% 05.50.+q                  Lattice theory and statistics (Ising, Potts, etc.)
+
+%\begin{keyword}
+%entropic inequalities, ... \PACS ??
+%\end{keyword}
+\end{frontmatter}
+
+%\newpage
+%\noindent{\bf Program Summary}
+%
+%{\it Title of program:} QUBIT4MATLAB V3.0\\
+%{\it Catalogue identifier:} AEAZ\_v1\_0\\
+%{\it Program summary URL:}\\
+%http://cpc.cs.qub.ac.uk/summaries/AEAZ\_v1\_0.html,\\
+%also at http://arxiv.org/abs/0709.0948\\
+%{\it Program available from:}\\ CPC Program Library, Queen's
+%University, Belfast, N. Ireland, also at\\
+%http://optics.szfki.kfki.hu/$\sim$toth/qubit4matlab.html,\\
+%http://www.mathworks.com/matlabcentral/fileexchange/ \\
+%{\it Licensing provisions:}\\ Standard CPC licence,\\
+%http://cpc.cs.qub.ac.uk/licence/licence.html\\
+%%{\it Number of bytes in distributed program, including test code and
+%%documentation:} $\sim$40kB, compressed with gzip\\
+%{\it Programming language used:} MATLAB 6.5; runs also on Octave\\
+%{\it Computer:} Any which supports MATLAB 6.5.\\
+%{\it Operating systems:} Any which supports MATLAB 6.5; e.g.,
+%Microsoft Windows XP, Linux.\\
+%{\it Classification:} 4.15.\\
+%
+%%%{\it Distribution format:} .zip\\\\
+%
+%{\it Nature of Problem:}
+%
+%Subroutines helping calculations in quantum
+%information science and quantum optics\\
+%
+%{\it Method of Solution:}
+%
+%A program package, that is, a set of commands is provided for
+%MATLAB. One can use these commands interactively or they can also be
+%used within a program.
+
+\newpage
+
+\tableofcontents
+
+\section{Introduction}
+{\color{red} General introduction to write.}\\\\
+The main object, which this package operates with, is system of linear inequalities $Ax\leq b$ for some coefficient matrix $A$ and vector of constant $b$. In this package such systems are given by \href{https://de.mathworks.com/help/matlab/structures.html}{structures}, containing three fields. For a structure {\verb S } 
+\begin{itemize}
+\item[] {\verb S.A } -- is a coefficient matrix $A$,
+\item[] {\verb S.b } -- is a vector of constant $b$,
+\item[] {\verb S.var } -- is a list of variable indexes. 
+\end{itemize}
+List of variable indexes are given as decimals of binary encoding of variables. For example, for entropy of two variables $X$ and $Y$, their binary codes are [1~0] and [0~1] respectively. For the joint entropy $H(XY)$ the respective code is [1~1]. {\color{red} Explain more.} \\ 
+{\color{red} Definition of entropy vector should be given above.}
+
+\section{Basic inequalities}
+In this section we describe the commands which generate systems of inequalities\\
+\begin{itemize}
+\item {\verb ShannonCone(N,[list]) } : System of Shannon inequalities  for variables from the {\verb list }. If {\verb list } is not specified  {\verb list  = [1:N] }.
+\end{itemize}
+
+\section{Causal structure}
+
+
+\section{Some basic functions used in the package}
+\begin{itemize}
+\item {\verb i2v(N,[list]) } : Translator of numbers from decimal system to binary. Used here to enumerate superset of variables. \\
+If {\verb list } is not specified  {\verb list  = [1,\dots $2^N$] }.
+Example:
+\begin{verbatim}
+>> V = i2v(4,[3,5])
+V = 
+    0 0 1 1 
+    0 1 0 1
+    
+\end{verbatim}
+\item {\verb v2i(list) } : Translator of numbers from binary system to decimals. \end{itemize}
+
+
+
+
+%\item {\verb trace2(M) }: Trace-square of a matrix
+
+\begin{thebibliography}{99}
+
+\bibitem{book} 
+
+\end{thebibliography}
+
+\end{document}
