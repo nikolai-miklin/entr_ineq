@@ -1,6 +1,6 @@
 # entr_ineq
 MATLAB package for calculating entropic inequalities.  
-[PACKAGE IS NOT COMPLETE. I'M CURRENTLY UPLOADING IT.]
+[PACKAGE IS NOT COMPLETE. WE'RE CURRENTLY UPLOADING IT.]
 
 The main goal of the package is to calculate entropic inequalities from
 basic Shannon or von Neumann inequalities for a given set of random
