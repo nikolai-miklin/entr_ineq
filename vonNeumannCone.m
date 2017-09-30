@@ -31,8 +31,8 @@ else
     A.A(:,index_n) = [monot_ineq;subm_ineq];
 end
 A.A = unique(A.A,'rows');
-Warning_message = ['Please note that the generated system may contain', ...
-' redundant inequalities. Please consider removing them using RemoveRedundancy.'];
+Warning_message = ['Warning: the generated system may contain', ...
+' redundant inequalities.'];
 disp(Warning_message);
 A.A = sparse(A.A);
 A.b = zeros(size(A.A,1),1);
