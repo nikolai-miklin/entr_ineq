@@ -52,6 +52,9 @@ function A = SubModularity(N)
 %   H(S)+H(S+I+J)-H(S+I)-H(S+J) <=0
 %   S denotes here powerset_not_c(k,:).
 %
+if N==2 
+    A = [-1 -1 1];
+else
     C = nchoosek(1:N,2);
     A = zeros(size(C,1)*(2^(N-2)),2^N-1);
     for n=1:size(C,1) % for each unique pair I,J in [1,...,N].
@@ -67,4 +70,5 @@ function A = SubModularity(N)
             A((n-1)*(2^(N-2))+k,[v2i(powerset_not_c(k,:)+I+J),v2i(powerset_not_c(k,:))])=1;
         end
     end
+end
 end
